@@ -21,9 +21,9 @@ const relatorios = async()=>{
     <td>${dataCorreta}</td>
     <td>${entrada.observacao}</td>
     <td>
-        <a href="reservas.html" class="btn btn-dark"><i class="bi bi-file-earmark-arrow-down"></i></a>
-        <a href="editar.html" class="btn btn-secondary"><i class="bi bi-pencil"></i></a>
-        <a href="editar.html" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+        <a href="" class="btn btn-success"><i class="bi bi-file-earmark-arrow-down"></i></a>
+        <a href="" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+        <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
     </td>
     
 

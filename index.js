@@ -23,9 +23,10 @@ acessarbtn.addEventListener('click', async (event)=> {
     logo.src='./loading.gif'
     event.preventDefault();
     if(!matricula.value || !data.value){
-      alerta.innerText = `Preencha todos os campos e tente novamente!`
-      alerta.style.display = 'block'
       logo.src='./bird.svg'
+      alert(`Matricula não encontrada no banco de dados. Por favor cadastra-se!`);
+      window.location.reload();
+      return
       return;
     }
 
@@ -47,26 +48,20 @@ acessarbtn.addEventListener('click', async (event)=> {
   const conteudo = await resposta.json();
 
   if(conteudo == 'Matrícula não cadastrada!'){
-    alerta.innerText = `Matricula não encontrada no banco de dados. Por favor cadastra-se!`;
-    alerta.style.display = 'block'
     logo.src='./bird.svg'
+    alert(`Matricula não encontrada no banco de dados. Por favor cadastra-se!`);
+    window.location.reload();
     return
   }
 
   if(conteudo == 'Matrícula cadastrada com sucesso!'){
-    alerta.innerHTML = `teste`
-    alerta.style.display = 'block'
-    logo.src='./bird.svg'
+    logo.src='./bird.svg';
+    alert('Registro realizado com sucesso!');
+    window.location.reload();
     return
   }
   
-  // matricula.value = '';
-  // data.value = '';
-  // oberservacao.value = '';
-  console.log(conteudo)
 
-  alerta.innerText = conteudo;
-  logo.src='./bird.svg'
 
   } catch (error) {
     console.log(error);
