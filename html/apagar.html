@@ -22,13 +22,18 @@
 
     <main>
       <div class="login text-center">
-          <img id='logo' src="../img/bird.svg" width="50%"/>
+        <img id='logo' src="../img/bird.svg" width="50%"/>
+        <h4 class="text-center">Remover registro</h4>
           <div class="alert alert-danger msg" role="alert"></div>
           <form>
             <!-- Matrícula -->
             <div class="form-group">
               <label class="form-label" for="matricula">Matrícula</label>
               <input class="form-control" type="number" id="matricula" min="1" required placeholder="Matrícula - 6 digitos" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="data">Data</label>
+              <input class="form-control" type="text" id="data" min="1" required placeholder="Matrícula - 6 digitos" readonly>
             </div>
             <!-- Cadastrar -->
             <input class="btn btn-danger w-100" type="submit" value="Apagar" id="apagar">
