@@ -9,7 +9,7 @@ const relatorios = async()=>{
   console.log(conteudo)
 
 
-  conteudo.entradas.forEach((entrada)=>{
+  conteudo.entradas.reverse().forEach((entrada)=>{
     const dataFormatada = new Date(entrada.data);
     const dataCorreta = dataFormatada.toLocaleDateString('pt-BR', {timeZone: 'UTC',weekday:'long', year: 'numeric', month:'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric'});
     const tabela = document.querySelector('#tabela');
@@ -21,8 +21,8 @@ const relatorios = async()=>{
     <td>${dataCorreta}</td>
     <td>${entrada.observacao}</td>
     <td>
-        <a href="" class="btn btn-success"><i class="bi bi-file-earmark-arrow-down"></i></a>
-        <a href="" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+        <a href="" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i></a>
+        <a href="" class="btn btn-secondary"><i class="bi bi-pencil"></i></a>
         <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
     </td>
     

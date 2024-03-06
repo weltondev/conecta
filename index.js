@@ -1,6 +1,6 @@
 const campoMatricula = document.querySelector('#matricula');
 const data = document.querySelector('#datahora');
-const oberservacao = document.querySelector('#observacao');
+const observacao = document.querySelector('#observacao');
 const matricula = document.querySelector('#matricula');
 const acessarbtn = document.querySelector('#entrar');
 const alerta = document.querySelector('#alerta');
@@ -33,7 +33,7 @@ acessarbtn.addEventListener('click', async (event)=> {
     const raw = {
       matricula: matricula.value,
       data: data.value,
-      oberservacao: oberservacao.value
+      observacao: observacao.value
     }
     const requestOptions = {
       method: 'POST',
@@ -57,7 +57,7 @@ acessarbtn.addEventListener('click', async (event)=> {
   if(conteudo == 'Matrícula cadastrada com sucesso!'){
     logo.src='./bird.svg';
     alert('Registro realizado com sucesso!');
-    window.location.reload();
+    window.location.href = './relatorio.html';
     return
   }
   

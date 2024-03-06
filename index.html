@@ -37,7 +37,7 @@
 
         <div class="form-group">
           <label class="form-label" for="matricula">Matrícula</label>
-          <input  class="form-control" type="number" maxlength='6' id="matricula" required placeholder="nº matrícula">
+          <input  class="form-control" type="number" min="0" minlength="1" maxlength='6' id="matricula" required placeholder="nº matrícula">
         </div>
 
         <div class="form-group">
@@ -46,8 +46,8 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="matrícula">Observação</label>
-          <textarea class="form-control" id='observacao' placeholder="Deixe sua observação aqui!"></textarea>
+          <label class="form-label" for="observacao">Observação</label>
+          <textarea class="form-control" id="observacao" placeholder="Deixe sua observação aqui!"></textarea>
         </div>
 
         <a href="./cadastro.html" class="cdnMatricula">Cadastrar Matrícula</a>
