@@ -5,6 +5,7 @@
   const data = document.querySelector('#data');
   const apagar = document.querySelector('#apagar');
   const logo = document.querySelector('#logo');
+  const voltar = document.querySelector('#voltar');
 
   const parametros = new URLSearchParams(window.location.search);
   const id = parametros.get('id')
@@ -15,6 +16,10 @@
   matricula.value = matriculaURL;
   data.value = dataCorreta;
 
+  voltar.addEventListener('click', (event)=>{
+    event.preventDefault();
+    window.location.href = `./relatorio.html`;
+  })
   apagar.addEventListener('click', async (event)=>{
     try {
       event.preventDefault();
