@@ -20,45 +20,29 @@
     </form>
   </nav>
 
-<main>
-  <div class="login text-center">
-      <img src="./bird.svg" width="50%"/>
-      <div class="col d-flex justify-content-center align-items-center">
-        <img class='text-center' src="./loading.gif" alt="loading" id="loading" width="50px" style="display: none;">
+<div class="my-5 principal">
+  <h1>Informações</h1>
+
+  <a href="./relatorio.html" class="btn btn-primary">Voltar</a>
+</div> 
+
+<div class="bd-example">
+  <table class="table">
+      <thead>
+          <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Matricula</th>
+              <th scope="col">RG</th>
+              <th scope="col">CPF</th>
+          </tr>
+      </thead>
+      <tbody id="tabela">
+      </tbody>
+      </table>
       </div>
-      <div class="alert alert-danger msg" role="alert">
-        Matricula deve ter apenas 6 numeros
-      </div>
-      <div class="alert alert-danger msg" role="alert"></div>
-      <form>
-        <!-- Nome -->
-        <div class="form-group">
-          <label class="form-label" for="nome">Nome</label>
-          <input  class="form-control" type="text" maxlength='6' id="nome" required placeholder="Nome" readonly value="">
-        </div>
-        <!-- RG -->
-        <div class="form-group">
-          <label class="form-label" for="datahora">RG</label>
-          <input class="form-control" type="number" id="rg" required placeholder="RG" readonly>
-        </div>
-        <!-- CPF -->
-        <div class="form-group">
-          <label class="form-label" for="cpf">CPF</label>
-          <input class="form-control" type="number" id="cpf" required placeholder="CPF" readonly>
-        </div>
-        <!-- Matrícula -->
-        <div class="form-group">
-          <label class="form-label" for="matricula">Matrícula</label>
-          <input class="form-control" type="number" id="matricula" required placeholder="nº Matrícula" readonly>
-        </div>
 
 
 
-        <!-- Cadastrar -->
-        <input class="btn btn-primary w-100" type="submit" value="Voltar" id="cadastrar">
-      </form>
-  </div>
-</main>
   <script src="info.js"></script>
 </body>
 </html>

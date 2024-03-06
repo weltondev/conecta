@@ -16,12 +16,19 @@ try {
 const resposta = await fetch(`https://conecta.cyclic.app/matriculas/${id}`, requestOptions);
 const conteudo = await resposta.json();
 
-console.log(conteudo)
+const tabela = document.querySelector('#tabela');
+const tr = document.createElement('tr');
 
-nome.value = conteudo.infos.nome;
-matricula.value = conteudo.infos.matricula;
-rg.value = conteudo.infos.rg;
-cpf.value = conteudo.infos.cpf;
+tr.innerHTML = `
+<td>${conteudo.infos.nome}</td>
+<td>${conteudo.infos.matricula}</td>
+<td>${conteudo.infos.rg}</td>
+<td>${conteudo.infos.cpf}</td>
+`;
+
+tabela.appendChild(tr);
+
+console.log(conteudo)
 
 } catch (error) {
   console.log(error)
