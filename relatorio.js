@@ -16,7 +16,6 @@ const relatorios = async()=>{
     const tr = document.createElement('tr');
     tr.innerHTML = `
 
- 
     <td>${entrada.matricula}</td>
     <td>${dataCorreta}</td>
     <td>${entrada.observacao}</td>
@@ -25,8 +24,6 @@ const relatorios = async()=>{
         <a href="" class="btn btn-secondary"><i class="bi bi-pencil"></i></a>
         <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
     </td>
-    
-
     `
     tabela.appendChild(tr);
 
