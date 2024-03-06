@@ -1,3 +1,4 @@
+
 const relatorios = async()=>{
   try {
     var requestOptions = {
@@ -23,9 +24,10 @@ const relatorios = async()=>{
         <a href="" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i></a>
         <a href="" class="btn btn-secondary"><i class="bi bi-pencil"></i></a>
         <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+        <a href="info.html?id=${entrada._id}" class="btn btn-light"><i class="bi bi-three-dots-vertical"></i></a>
     </td>
     `
-    tabela.appendChild(tr);
+    tabela.appendChild(tr)
 
     document.querySelector('#loading').style.display = 'none';
   })
