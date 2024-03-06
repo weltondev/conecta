@@ -29,7 +29,6 @@ const relatorios = async()=>{
     `
     tabela.appendChild(tr)
 
-    document.querySelector('#loading').style.display = 'none';
   })
   } catch (error) {
     console.log(error);

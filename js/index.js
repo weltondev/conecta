@@ -20,10 +20,10 @@ matricula.addEventListener('keyup', ()=> {
 
 acessarbtn.addEventListener('click', async (event)=> {
   try {
-    logo.src='./loading.gif'
+    logo.src='../img/loading.gif'
     event.preventDefault();
     if(!matricula.value || !data.value){
-      logo.src='./bird.svg'
+      logo.src='./img/bird.svg'
       alert(`Matricula não encontrada no banco de dados. Por favor cadastra-se!`);
       window.location.reload();
       return
@@ -48,21 +48,19 @@ acessarbtn.addEventListener('click', async (event)=> {
   const conteudo = await resposta.json();
 
   if(conteudo == 'Matrícula não cadastrada!'){
-    logo.src='./bird.svg'
+    logo.src='./img/bird.svg'
     alert(`Matricula não encontrada no banco de dados. Por favor cadastra-se!`);
     window.location.reload();
     return
   }
 
   if(conteudo == 'Matrícula cadastrada com sucesso!'){
-    logo.src='./bird.svg';
+    logo.src='./img/bird.svg';
     alert('Registro realizado com sucesso!');
     window.location.href = './relatorio.html';
     return
   }
   
-
-
   } catch (error) {
     console.log(error);
   }
