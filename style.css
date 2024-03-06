@@ -58,3 +58,7 @@ main {
   font-size: 13px;
 }
 
+#alerta, #loading{
+  display: none;
+}
+
