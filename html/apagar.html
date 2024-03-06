@@ -9,7 +9,7 @@
 
       <link rel="stylesheet" href="../css/style.css">
       <link rel="stylesheet" href="../css/cadastro.css">
-      <title>Cadastrar Matricula</title>
+      <title>Apagar</title>
     </head>
     <body>
 
@@ -23,37 +23,19 @@
     <main>
       <div class="login text-center">
           <img id='logo' src="../img/bird.svg" width="50%"/>
-          <div class="alert alert-danger msg" role="alert">
-            Matricula deve ter apenas 6 numeros
-          </div>
           <div class="alert alert-danger msg" role="alert"></div>
           <form>
-            <!-- Nome -->
-            <div class="form-group">
-              <label class="form-label" for="nome">Nome</label>
-              <input  class="form-control" type="text" id="nome" required placeholder="Nome">
-            </div>
-            <!-- RG -->
-            <div class="form-group">
-              <label class="form-label" for="datahora">RG</label>
-              <input class="form-control" type="number" id="rg" min="0" required placeholder="RG - 9 digitos">
-            </div>
-            <!-- CPF -->
-            <div class="form-group">
-              <label class="form-label" for="cpf">CPF</label>
-              <input class="form-control" type="number" id="cpf" min="0" required placeholder="CPF - 11 digitos">
-            </div>
             <!-- Matrícula -->
             <div class="form-group">
               <label class="form-label" for="matricula">Matrícula</label>
-              <input class="form-control" type="number" id="matricula" min="1" required placeholder="Matrícula - 6 digitos">
+              <input class="form-control" type="number" id="matricula" min="1" required placeholder="Matrícula - 6 digitos" readonly>
             </div>
             <!-- Cadastrar -->
-            <input class="btn btn-primary w-100" type="submit" value="Cadastrar" id="cadastrar">
+            <input class="btn btn-danger w-100" type="submit" value="Apagar" id="apagar">
           </form>
       </div>
     </main>
 
-      <script src="../js/cadastro.js"></script>
+      <script src="../js/apagar.js"></script>
     </body>
     </html>
