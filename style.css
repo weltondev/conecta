@@ -7,6 +7,10 @@
 body {
   background-color:  #d8d8d8;
 }
+.principal {
+  margin: 0 .5rem;
+}
+
 
 main {
   height: 92vh;
@@ -53,3 +57,4 @@ main {
   text-decoration: none;
   font-size: 13px;
 }
+

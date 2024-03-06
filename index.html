@@ -39,40 +39,19 @@
         <div class="form-group">
           <label class="form-label" for="datahora">Data</label>
           <input class="form-control" type="datetime-local" id="datahora" required placeholder="Data e hora">
-
         </div>
+
+        <div class="form-group">
+          <label class="form-label" for="matrícula">Observação</label>
+          <textarea class="form-control" id='observacao' placeholder="Deixe sua observação aqui!"></textarea>
+        </div>
+
         <a href="./cadastro.html" class="cdnMatricula">Cadastrar Matrícula</a>
-        <input class="btn btn-primary w-100" type="submit" value="Entrar" id="entrar">
+        <input class="btn btn-primary w-100" type="submit" value="Registrar" id="entrar">
       </form>
   </div>
 </main>
-  <!-- scripts -->
-  <script>
-      const matricula = document.querySelector('#matricula');
-        matricula.addEventListener('keyup', (e)=>{
-          if(matricula.value.length > 6){
-            document.querySelector('.msg').style.display = 'block'
-            console.log('Matricula deve ter apenas 6 numeros');
-            matriculaNumeros = matricula.value;
-            matriculaCorreta = matriculaNumeros.split('').slice(0, 6)
-            matricula.value = +matriculaCorreta.join('')
-          }
 
-        })
-      
-
-    // const btn = document.querySelector('#btn');
-    // const datahora = document.querySelector('#datahora');
-
-    // btn.addEventListener('click', (e)=> {
-    //   e.preventDefault();
-    //   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'};
-    //   const dataFormatada = new Date(datahora.value);
-    //   // console.log(dataFormatada.toDateString())
-    //   console.log(dataFormatada.toLocaleDateString('pt-BR', options));
-      
-    // })
-  </script>
-  <script src="app.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
