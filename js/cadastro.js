@@ -3,10 +3,10 @@
   const rg = document.querySelector('#rg');
   const cpf = document.querySelector('#cpf');
   const cadastrar = document.querySelector('#cadastrar');
-
-
+  const logo = document.querySelector('#logo');
 
   cadastrar.addEventListener('click', async (event)=>{
+    logo.src="../img/loading.gif"
     event.preventDefault();
     if(!nome.value){
       return alert('Por favor preencha o campo nome!');
@@ -41,12 +41,23 @@
     const resposta = await fetch(`https://conecta.cyclic.app/matriculas`, requestOptions)
     const conteudo = await resposta.json();
 
-    if(conteudo == 'Usuário já cadastrado!'){
+    if(conteudo == 'Matricula já cadastrada!'){
       alert(conteudo);
     }
+    if(conteudo == 'RG já cadastrado!'){
+      alert(conteudo);
+    }
+    if(conteudo == 'CPF já cadastrado!'){
+      alert(conteudo);
+    }
+    if(conteudo == 'Matrícula cadastrada com sucesso!'){
+      alert(conteudo);
+      window.location.href = './index.html';
+    }
 
-    console.log(conteudo);
-      
+  
+    logo.src="../img/bird.svg"
+    
     } catch (error) {
       console.log(error);
     }
